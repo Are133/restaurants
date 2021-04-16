@@ -2,7 +2,7 @@ import React, {useState,useEffect} from 'react'
 import { StyleSheet} from 'react-native'
 import UserGuest from './UserGuest'
 import UserLogged from './UserLogged'
-import {getCurrentUser, isUserLogged} from '../../utils/action'
+import {isUserLogged} from '../../utils/action'
 import Loading from '../../components/Loading'
 
 export default function Account() {
