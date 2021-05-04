@@ -6,6 +6,7 @@ import { closeSesion, getCurrentUser } from "../../utils/action";
 import Toast from "react-native-easy-toast";
 import Loading from "../../components/Loading";
 import InfoUser from "../../components/account/InfoUser";
+import AccountOptions from "../../components/account/AccountOptions";
 
 export default function UserLogged() {
   const navigation = useNavigation();
@@ -25,7 +26,10 @@ export default function UserLogged() {
             
             <View>
                 <InfoUser user={user} setLoading={setLoading} setLoadingText={setLoadingText}/>
-                <Text>Account Options</Text>
+                <AccountOptions
+                 user={user} 
+                 toasRef={toasRef}
+                />
 
             </View>
         )
