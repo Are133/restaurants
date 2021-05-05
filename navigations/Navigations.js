@@ -57,7 +57,7 @@ export default function Navigations() {
     return (
         <NavigationContainer>
             <Tab.Navigator
-            initialRouteName="restaurant"
+            initialRouteName="restaurants"
             tabBarOptions={{
                 inactiveTintColor:"#cdd6b7",
                 activeTintColor:"#8cc43c"
