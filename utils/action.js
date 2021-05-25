@@ -83,3 +83,47 @@ export const updateProfile = async(data) => {
     }
     return result;
 }
+
+export const reauThenticate = async(password) => {
+    
+    const result ={status:true,error:null}
+    const user = getCurrentUser()
+
+    const credentials = firebase.auth.EmailAuthProvider.credential(user.email, password)
+
+    try {
+        await user.reauthenticateWithCredential(credentials)
+    } catch (error) {
+        result.status=false
+        result.error=error
+
+    }
+
+    return result
+}
+
+export const updateEmail = async(email) => {
+    const result = {status:true, error:null}
+
+    try {
+        await firebase.auth().currentUser.updateEmail(email)
+    } catch (error) {
+        result.status=false
+        result.error=error
+    }
+    return result;
+}
+
+
+export const updatePassword = async(password) => {
+    const result = {status:true, error:null}
+
+    try {
+        await firebase.auth().currentUser.updatePassword(password)
+    } catch (error) {
+        result.status=false
+        result.error=error
+    }
+    return result;
+}
+

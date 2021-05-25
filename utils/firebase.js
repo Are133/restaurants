@@ -1,14 +1,14 @@
 import firebase from 'firebase/app'
 import 'firebase/firebase-firestore'
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyDI8uyb11yoJYe3stmtlItIvADlyhC7ni0",
-    authDomain: "restaurants-23b89.firebaseapp.com",
-    projectId: "restaurants-23b89",
-    storageBucket: "restaurants-23b89.appspot.com",
-    messagingSenderId: "773496541193",
-    appId: "1:773496541193:web:bb9acc2fcf47fee8f868d8"
-  };
+const firebaseConfig = {
+  apiKey: "AIzaSyB4PvmoEEUHnDuMre0D7VyNH4I3KqPkh34",
+  authDomain: "restaurants-3552d.firebaseapp.com",
+  projectId: "restaurants-3552d",
+  storageBucket: "restaurants-3552d.appspot.com",
+  messagingSenderId: "22338429694",
+  appId: "1:22338429694:web:5521a81eab878ded4c7baf"
+}
   
   
  export const firebaseApp =  firebase.initializeApp(firebaseConfig);

@@ -1,10 +1,11 @@
 import { map } from "lodash";
 import React, { useState } from "react";
-import { Children } from "react";
 import { StyleSheet, View } from "react-native";
 import { Icon, ListItem, Text } from "react-native-elements";
 import Modal from "../Modal";
 import ChangeDisplayNameForm from "./ChangeDisplayNameForm";
+import ChangeEmailForm from "./ChangeEmailForm";
+import ChangePasswordForm from "./ChangePasswordForm";
 
 export default function AccountOptions({ user, toasRef,setReloadUser }) {
   
@@ -59,11 +60,19 @@ export default function AccountOptions({ user, toasRef,setReloadUser }) {
         break;
 
       case "email":
-        setRenderComponent(<Text>email</Text>);
+        setRenderComponent(<ChangeEmailForm
+          email={user.email}
+          setShowModal={setShowModal}
+          toasRef={toasRef}
+          setReloadUser={setReloadUser}
+        /> );
         break;
 
       case "password":
-        setRenderComponent(<Text>password</Text>);
+        setRenderComponent(<ChangePasswordForm
+          setShowModal={setShowModal}
+          toasRef={toasRef}
+        />);
         break;
     }
 

@@ -27,12 +27,12 @@ export default function ChangeDisplayNameForm({ displayName, setShowModal, toasR
         setReloadUser(true)
         toasRef.current.show("Accion completada con exito",3000)
 
-        setShowModal(false)
+       setShowModal(false)
     }
 
     const validateForm = () => {
 
-        seterror(null)
+        
         if(isEmpty(newDisplayName)){
             seterror("Los campos no pueden estar vacios")
             return false
